@@ -102,7 +102,12 @@
   }
 
   .hero-ball::after {
-    content: '';
+    content: '🏀';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    opacity: 0.15;
   }
 
   @keyframes float {
@@ -241,6 +246,12 @@
 
   .cat-card:hover::before { width: 100%; }
   .cat-card:hover { background: #222; transform: translateY(-4px); }
+
+  .cat-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+  }
 
   .cat-title {
     font-weight: 700;
@@ -554,26 +565,31 @@
     <div class="section-title">カテゴリから探す</div>
     <div class="categories">
       <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">⬆️</span>
         <div class="cat-count">01</div>
         <div class="cat-title">垂直跳び強化</div>
         <div class="cat-desc">ジャンプ力を上げるトレーニングメニューと筋肉の使い方</div>
       </a>
       <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">💪</span>
         <div class="cat-count">02</div>
         <div class="cat-title">体幹トレーニング</div>
         <div class="cat-desc">ドライブ・ディフェンスに効く体幹の鍛え方</div>
       </a>
       <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">⚡</span>
         <div class="cat-count">03</div>
         <div class="cat-title">俊敏性・スピード</div>
         <div class="cat-desc">アジリティラダー・クイックネストレーニング</div>
       </a>
       <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">🥤</span>
         <div class="cat-count">04</div>
         <div class="cat-title">プロテイン・栄養</div>
         <div class="cat-desc">バスケ選手に合ったプロテインの選び方・飲み方</div>
       </a>
       <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">🏋️</span>
         <div class="cat-count">05</div>
         <div class="cat-title">器具・ギア</div>
         <div class="cat-desc">自宅トレーニングに使えるおすすめ器具レビュー</div>
@@ -621,7 +637,7 @@
   <div class="section-title">おすすめ商品ランキング</div>
   <div class="product-grid">
     <div class="product-card fade-up">
-      <div class="product-rank">RANK 01</div>
+      <div class="product-rank">🥇 RANK 01</div>
       <div class="product-name">ザバス ホエイプロテイン100 ココア味</div>
       <div class="product-desc">国内シェアNo.1。溶けやすく飲みやすい。バスケ部の定番プロテイン。</div>
       <div class="stars">★★★★★</div>
@@ -629,7 +645,7 @@
       <a href="#" class="btn-amazon">Amazonで見る →</a>
     </div>
     <div class="product-card fade-up">
-      <div class="product-rank">RANK 02</div>
+      <div class="product-rank">🥈 RANK 02</div>
       <div class="product-name">VALX EAA9 レモン風味</div>
       <div class="product-desc">練習中に飲めるEAA。筋肉の分解を防ぎパフォーマンスを維持。</div>
       <div class="stars">★★★★☆</div>
@@ -637,7 +653,7 @@
       <a href="#" class="btn-amazon">Amazonで見る →</a>
     </div>
     <div class="product-card fade-up">
-      <div class="product-rank">RANK 03</div>
+      <div class="product-rank">🥉 RANK 03</div>
       <div class="product-name">アジリティラダー トレーニング用</div>
       <div class="product-desc">フットワーク・俊敏性強化に。自宅の庭や公園で使える。</div>
       <div class="stars">★★★★☆</div>
