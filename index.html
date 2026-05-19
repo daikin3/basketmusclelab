@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バスケ筋トレLAB | バスケ上達のための筋トレ情報サイト</title>
+<meta name="description" content="バスケットボール上達に特化した筋トレ・プロテイン・トレーニング器具の情報サイト。垂直跳び・体幹・俊敏性を鍛えるメソッドを紹介。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --orange: #FF5C1A;
+    --orange-light: #FF8C55;
+    --white: #f5f5f0;
+    --gray: #1a1a1a;
+    --gray2: #2a2a2a;
+    --gray3: #888;
+    --accent: #FFD700;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,92,26,0.2);
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--orange);
+  }
+
+  .logo span { color: var(--white); }
+
+  nav a {
+    color: var(--gray3);
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 24px;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--orange); }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 100px 40px 60px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 60% at 80% 50%, rgba(255,92,26,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(255,92,26,0.06) 0%, transparent 60%);
+  }
+
+  .hero-ball {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,92,26,0.15);
+    background: radial-gradient(circle at 35% 35%, rgba(255,92,26,0.08), transparent 70%);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .hero-ball::before {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,92,26,0.08);
+  }
+
+  .hero-ball::after {
+    content: '🏀';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    opacity: 0.15;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(-50%) rotate(0deg); }
+    50% { transform: translateY(-53%) rotate(5deg); }
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 640px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 8vw, 96px);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 .highlight {
+    color: var(--orange);
+    display: block;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--gray3);
+    max-width: 480px;
+    margin-bottom: 36px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 16px 32px;
+    transition: all 0.2s;
+  }
+
+  .hero-cta:hover {
+    background: var(--orange-light);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray3);
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  /* ===== CATEGORIES ===== */
+  .section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 48px;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2px;
+  }
+
+  .cat-card {
+    background: var(--gray2);
+    padding: 36px 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+  }
+
+  .cat-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 3px;
+    width: 0;
+    background: var(--orange);
+    transition: width 0.3s;
+  }
+
+  .cat-card:hover::before { width: 100%; }
+  .cat-card:hover { background: #222; transform: translateY(-4px); }
+
+  .cat-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .cat-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .cat-desc {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.7;
+  }
+
+  .cat-count {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: rgba(255,255,255,0.04);
+  }
+
+  /* ===== FEATURED ARTICLES ===== */
+  .articles {
+    padding: 80px 40px;
+    background: var(--gray);
+  }
+
+  .articles-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2px;
+  }
+
+  .article-main {
+    background: var(--gray2);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .article-main:hover { background: #252525; }
+
+  .article-main::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,92,26,0.08), transparent);
+  }
+
+  .article-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .article-main h2 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .article-main p {
+    font-size: 13px;
+    color: var(--gray3);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .read-more {
+    font-size: 12px;
+    color: var(--orange);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .article-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .article-small {
+    background: var(--gray2);
+    padding: 24px;
+    flex: 1;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-left: 3px solid transparent;
+  }
+
+  .article-small:hover {
+    background: #252525;
+    border-left-color: var(--orange);
+  }
+
+  .article-small h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .article-small p {
+    font-size: 11px;
+    color: var(--gray3);
+    line-height: 1.6;
+  }
+
+  /* ===== PRODUCTS ===== */
+  .products {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .product-card {
+    background: var(--gray2);
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .product-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+  }
+
+  .product-rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .product-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .product-desc {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .stars {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .product-price {
+    font-size: 11px;
+    color: var(--gray3);
+  }
+
+  .btn-amazon {
+    display: block;
+    text-align: center;
+    background: var(--orange);
+    color: var(--white);
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: background 0.2s;
+  }
+
+  .btn-amazon:hover { background: var(--orange-light); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #050505;
+    border-top: 1px solid rgba(255,92,26,0.1);
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--orange);
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  footer p {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.8;
+    margin-bottom: 8px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    color: var(--gray3);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .footer-links a:hover { color: var(--orange); }
+
+  /* ===== SCROLL ANIMATION ===== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    header { padding: 14px 20px; }
+    nav { display: none; }
+    .hero { padding: 90px 24px 48px; }
+    .hero-ball { width: 300px; height: 300px; right: -100px; }
+    .hero h1 { font-size: 52px; }
+    .hero-stats { gap: 24px; }
+    .section, .articles, .products { padding: 60px 24px; }
+    .article-grid { grid-template-columns: 1fr; }
+    footer { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">BASKET<span>MUSCLE</span>LAB</div>
+  <nav>
+    <a href="#categories">カテゴリ</a>
+    <a href="#articles">記事</a>
+    <a href="#products">おすすめ商品</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ball"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Basketball × Training</span>
+    <h1>
+      バスケで
+      <span class="highlight">勝てる体</span>
+      を作れ。
+    </h1>
+    <p>垂直跳び・俊敏性・体幹。バスケットボール上達に直結する筋トレ情報をプロテイン・器具レビューとともに徹底解説。</p>
+    <a href="#articles" class="hero-cta">
+      記事を読む →
+    </a>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">30+</div>
+        <div class="stat-label">記事数</div>
+      </div>
+      <div>
+        <div class="stat-num">5</div>
+        <div class="stat-label">カテゴリ</div>
+      </div>
+      <div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">実体験ベース</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="section">
+    <div class="section-label">Categories</div>
+    <div class="section-title">カテゴリから探す</div>
+    <div class="categories">
+      <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">⬆️</span>
+        <div class="cat-count">01</div>
+        <div class="cat-title">垂直跳び強化</div>
+        <div class="cat-desc">ジャンプ力を上げるトレーニングメニューと筋肉の使い方</div>
+      </a>
+      <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">💪</span>
+        <div class="cat-count">02</div>
+        <div class="cat-title">体幹トレーニング</div>
+        <div class="cat-desc">ドライブ・ディフェンスに効く体幹の鍛え方</div>
+      </a>
+      <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">⚡</span>
+        <div class="cat-count">03</div>
+        <div class="cat-title">俊敏性・スピード</div>
+        <div class="cat-desc">アジリティラダー・クイックネストレーニング</div>
+      </a>
+      <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">🥤</span>
+        <div class="cat-count">04</div>
+        <div class="cat-title">プロテイン・栄養</div>
+        <div class="cat-desc">バスケ選手に合ったプロテインの選び方・飲み方</div>
+      </a>
+      <a href="#" class="cat-card fade-up">
+        <span class="cat-icon">🏋️</span>
+        <div class="cat-count">05</div>
+        <div class="cat-title">器具・ギア</div>
+        <div class="cat-desc">自宅トレーニングに使えるおすすめ器具レビュー</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles" class="articles">
+  <div class="articles-inner">
+    <div class="section-label">Articles</div>
+    <div class="section-title">新着・人気記事</div>
+    <div class="article-grid">
+      <div class="article-main fade-up">
+        <span class="article-tag">垂直跳び</span>
+        <h2>バスケ選手が垂直跳びを10cm伸ばすための筋トレメニュー【完全版】</h2>
+        <p>垂直跳びを伸ばすには大腿四頭筋・ハムストリングス・ふくらはぎの3つを正しく鍛えることが重要です。NBA選手も実践するジャンプトレーニングを初心者向けに解説します。</p>
+        <div class="read-more">READ MORE →</div>
+      </div>
+      <div class="article-sub">
+        <div class="article-small fade-up">
+          <div class="article-tag" style="font-size:9px;padding:3px 8px;margin-bottom:10px;display:inline-block;background:var(--orange);color:var(--white);font-weight:700;letter-spacing:1px;">プロテイン</div>
+          <h3>中学生バスケ部におすすめのプロテイン5選【飲み過ぎ注意点も解説】</h3>
+          <p>成長期の体に合ったプロテインの選び方と適切な摂取量を解説。</p>
+        </div>
+        <div class="article-small fade-up">
+          <div class="article-tag" style="font-size:9px;padding:3px 8px;margin-bottom:10px;display:inline-block;background:var(--gray3);color:var(--white);font-weight:700;letter-spacing:1px;">体幹</div>
+          <h3>バスケの体幹トレーニング｜家でできる10分メニュー</h3>
+          <p>器具なし・自重だけで体幹を鍛える10分ルーティン。</p>
+        </div>
+        <div class="article-small fade-up">
+          <div class="article-tag" style="font-size:9px;padding:3px 8px;margin-bottom:10px;display:inline-block;background:var(--gray3);color:var(--white);font-weight:700;letter-spacing:1px;">NBA</div>
+          <h3>レブロン・ジェームズの筋トレメニューを徹底解説</h3>
+          <p>世界最高峰の選手はどんなトレーニングをしているのか。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div class="section-label">Recommended</div>
+  <div class="section-title">おすすめ商品ランキング</div>
+  <div class="product-grid">
+    <div class="product-card fade-up">
+      <div class="product-rank">🥇 RANK 01</div>
+      <div class="product-name">ザバス ホエイプロテイン100 ココア味</div>
+      <div class="product-desc">国内シェアNo.1。溶けやすく飲みやすい。バスケ部の定番プロテイン。</div>
+      <div class="stars">★★★★★</div>
+      <div class="product-price">参考価格：3,980円〜</div>
+      <a href="#" class="btn-amazon">Amazonで見る →</a>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-rank">🥈 RANK 02</div>
+      <div class="product-name">VALX EAA9 レモン風味</div>
+      <div class="product-desc">練習中に飲めるEAA。筋肉の分解を防ぎパフォーマンスを維持。</div>
+      <div class="stars">★★★★☆</div>
+      <div class="product-price">参考価格：3,480円〜</div>
+      <a href="#" class="btn-amazon">Amazonで見る →</a>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-rank">🥉 RANK 03</div>
+      <div class="product-name">アジリティラダー トレーニング用</div>
+      <div class="product-desc">フットワーク・俊敏性強化に。自宅の庭や公園で使える。</div>
+      <div class="stars">★★★★☆</div>
+      <div class="product-price">参考価格：1,980円〜</div>
+      <a href="#" class="btn-amazon">Amazonで見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">BASKETMUSCLELAB</div>
+  <p>バスケットボール上達のための筋トレ・栄養・器具情報サイト</p>
+  <p>※本サイトはアフィリエイト広告を利用しています。</p>
+  <div class="footer-links">
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
+    <a href="#">サイトマップ</a>
+  </div>
+</footer>
+
+<script>
+  // スクロールアニメーション
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
