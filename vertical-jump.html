@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バスケで垂直跳びを10cm伸ばす筋トレメニュー【完全版】| バスケ筋トレLAB</title>
+<meta name="description" content="バスケットボール選手が垂直跳びを10cm伸ばすための筋トレメニューを完全解説。大腿四頭筋・ハムストリングス・ふくらはぎの鍛え方からプロテインまで紹介。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --orange: #FF5C1A;
+    --orange-light: #FF8C55;
+    --white: #f5f5f0;
+    --gray: #1a1a1a;
+    --gray2: #2a2a2a;
+    --gray3: #888;
+    --accent: #FFD700;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  /* HEADER */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,92,26,0.2);
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: var(--orange);
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--white); }
+
+  /* ARTICLE HERO */
+  .article-hero {
+    padding: 120px 24px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    color: var(--gray3);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .breadcrumb a {
+    color: var(--orange);
+    text-decoration: none;
+  }
+
+  .breadcrumb span { margin: 0 8px; }
+
+  .article-tag {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .article-hero h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .article-meta {
+    font-size: 12px;
+    color: var(--gray3);
+    margin-bottom: 32px;
+  }
+
+  /* SUMMARY BOX */
+  .summary-box {
+    background: var(--gray2);
+    border-left: 4px solid var(--orange);
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .summary-box h2 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--orange);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .summary-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .summary-box li {
+    font-size: 14px;
+    padding-left: 20px;
+    position: relative;
+    color: var(--white);
+  }
+
+  .summary-box li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  /* ARTICLE BODY */
+  .article-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .article-body h2 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 56px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--orange);
+    line-height: 1.5;
+  }
+
+  .article-body h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 36px 0 14px;
+    color: var(--orange-light);
+    line-height: 1.5;
+  }
+
+  .article-body p {
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.9;
+  }
+
+  /* TRAINING CARD */
+  .training-card {
+    background: var(--gray2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 24px 0;
+    transition: border-color 0.2s;
+  }
+
+  .training-card:hover {
+    border-color: var(--orange);
+  }
+
+  .training-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  .training-specs {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .spec {
+    background: rgba(255,92,26,0.12);
+    border: 1px solid rgba(255,92,26,0.3);
+    color: var(--orange-light);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+
+  .training-card p {
+    font-size: 13px;
+    color: var(--gray3);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* POINT BOX */
+  .point-box {
+    background: rgba(255,92,26,0.08);
+    border: 1px solid rgba(255,92,26,0.25);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .point-box p {
+    font-size: 14px;
+    color: var(--white);
+    margin: 0;
+  }
+
+  .point-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--orange);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  /* AFFILIATE CARD */
+  .affiliate-card {
+    background: var(--gray2);
+    border: 2px solid rgba(255,92,26,0.3);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 36px 0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .affiliate-info { flex: 1; }
+
+  .affiliate-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--orange);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .affiliate-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  .affiliate-card p {
+    font-size: 13px;
+    color: var(--gray3);
+    margin: 0 0 16px;
+    line-height: 1.7;
+  }
+
+  .stars {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .btn-amazon {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .btn-amazon:hover { background: var(--orange-light); }
+
+  /* TABLE */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  th {
+    background: var(--orange);
+    color: var(--white);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: #ccc;
+    font-size: 13px;
+  }
+
+  tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  /* FOOTER */
+  footer {
+    background: #050505;
+    border-top: 1px solid rgba(255,92,26,0.1);
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: var(--orange);
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  footer p {
+    font-size: 11px;
+    color: var(--gray3);
+    margin-bottom: 6px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 14px 20px; }
+    .affiliate-card { flex-direction: column; }
+    .training-specs { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">BASKET<span>MUSCLE</span>LAB</a>
+</header>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="index.html">トップ</a>
+    <span>/</span>
+    <a href="#">垂直跳び強化</a>
+    <span>/</span>
+    垂直跳びを10cm伸ばす筋トレメニュー
+  </div>
+  <div class="article-tag">垂直跳び強化</div>
+  <h1>バスケで垂直跳びを10cm伸ばす筋トレメニュー【完全版】</h1>
+  <div class="article-meta">2026年5月20日 更新</div>
+
+  <div class="summary-box">
+    <h2>この記事でわかること</h2>
+    <ul>
+      <li>垂直跳びに使う筋肉と鍛え方の優先順位</li>
+      <li>自宅でできる週3回のトレーニングメニュー</li>
+      <li>3ヶ月で10cm伸ばすためのスケジュール</li>
+      <li>バスケ選手に合ったプロテインの選び方</li>
+    </ul>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>バスケットボールでジャンプ力を上げたい、でも何をすればいいかわからない。そんな悩みを持つ選手は多いはずです。</p>
+
+  <p>結論から言うと、垂直跳びは正しい筋トレを続ければ確実に伸びます。実際に3ヶ月で10cm以上伸ばした選手は珍しくありません。この記事では、バスケ選手が垂直跳びを効率よく伸ばすための筋トレメニューを完全解説します。</p>
+
+  <h2>垂直跳びに使う筋肉はどこ？</h2>
+
+  <p>ジャンプするときに使う筋肉は主に3つです。この3つをバランスよく鍛えることが、垂直跳びを伸ばす最短ルートです。</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>筋肉</th>
+          <th>役割</th>
+          <th>重要度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>大腿四頭筋（太もも前）</td>
+          <td>膝を伸ばす力＝跳び上がる瞬間の爆発力</td>
+          <td>★★★★★</td>
+        </tr>
+        <tr>
+          <td>ハムストリングス（太もも裏）</td>
+          <td>股関節の伸展＝地面を押す力</td>
+          <td>★★★★</td>
+        </tr>
+        <tr>
+          <td>ふくらはぎ（腓腹筋）</td>
+          <td>最後の蹴り出し＝ジャンプの仕上げ</td>
+          <td>★★★★</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="point-box">
+    <div class="point-label">重要ポイント</div>
+    <p>多くの選手が大腿四頭筋だけを鍛えがちですが、ハムストリングスとのバランスが崩れると怪我のリスクが上がります。3つをセットで鍛えることが大切です。</p>
+  </div>
+
+  <h2>週3回の筋トレメニュー</h2>
+
+  <p>以下のメニューは器具なし・自宅でできる内容です。週3回（月・水・金など）取り組んでください。</p>
+
+  <h3>メニュー1｜スクワット（大腿四頭筋メイン）</h3>
+
+  <div class="training-card">
+    <h4>ノーマルスクワット</h4>
+    <div class="training-specs">
+      <span class="spec">3セット</span>
+      <span class="spec">15〜20回</span>
+      <span class="spec">インターバル60秒</span>
+    </div>
+    <p>足を肩幅に開き、つま先をやや外側に向ける。膝がつま先より前に出ないよう意識しながら、太ももが床と平行になるまで下げる。バスケのジャンプ動作に最も近い基本種目。</p>
+  </div>
+
+  <div class="training-card">
+    <h4>ジャンプスクワット</h4>
+    <div class="training-specs">
+      <span class="spec">3セット</span>
+      <span class="spec">10回</span>
+      <span class="spec">インターバル90秒</span>
+    </div>
+    <p>通常のスクワットから最大限の力で跳び上がる。着地は膝を曲げてやわらかく。爆発的な筋力（パワー）を鍛える種目で、垂直跳びへの直接的な効果が高い。</p>
+  </div>
+
+  <h3>メニュー2｜ルーマニアンデッドリフト（ハムストリングスメイン）</h3>
+
+  <div class="training-card">
+    <h4>シングルレッグデッドリフト</h4>
+    <div class="training-specs">
+      <span class="spec">3セット</span>
+      <span class="spec">左右各10回</span>
+      <span class="spec">インターバル60秒</span>
+    </div>
+    <p>片足立ちで上体を前傾させ、ハムストリングスのストレッチを感じながら戻す。バランス能力も同時に鍛えられ、バスケの着地安定性向上にも効果的。</p>
+  </div>
+
+  <h3>メニュー3｜カーフレイズ（ふくらはぎメイン）</h3>
+
+  <div class="training-card">
+    <h4>シングルレッグカーフレイズ</h4>
+    <div class="training-specs">
+      <span class="spec">3セット</span>
+      <span class="spec">左右各20回</span>
+      <span class="spec">インターバル45秒</span>
+    </div>
+    <p>段差の端に片足で立ち、かかとを最大限下げてから最大限上げる。ふくらはぎは回復が早い筋肉なので、毎日やっても問題ない。</p>
+  </div>
+
+  <h2>3ヶ月スケジュール</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>期間</th>
+          <th>内容</th>
+          <th>目標</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1ヶ月目</td>
+          <td>フォームの習得・週3回継続</td>
+          <td>+3〜4cm</td>
+        </tr>
+        <tr>
+          <td>2ヶ月目</td>
+          <td>負荷を上げる（回数・セット数増）</td>
+          <td>+3〜4cm</td>
+        </tr>
+        <tr>
+          <td>3ヶ月目</td>
+          <td>ジャンプ系種目を増やす</td>
+          <td>+3〜4cm</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="point-box">
+    <div class="point-label">注意点</div>
+    <p>筋トレは週3回以上やれば良いわけではありません。超回復（筋肉が修復・成長する時間）のために、筋トレ翌日は休むか軽いストレッチのみにしてください。</p>
+  </div>
+
+  <h2>おすすめプロテイン</h2>
+
+  <p>筋トレの効果を最大化するには、トレーニング後30分以内にプロテインを摂取することが重要です。</p>
+
+  <div class="affiliate-card">
+    <div class="affiliate-info">
+      <div class="affiliate-label">編集部おすすめ No.1</div>
+      <h4>ザバス ホエイプロテイン100 ココア味（1050g）</h4>
+      <div class="stars">★★★★★</div>
+      <p>国内シェアNo.1のプロテイン。溶けやすく飲みやすいため、初めてプロテインを飲む中高生にも人気。1食あたりのタンパク質量は約15gで、バスケ部の筋トレ後に最適。</p>
+      <a href="#" class="btn-amazon">Amazonで価格を確認する</a>
+    </div>
+  </div>
+
+  <div class="affiliate-card">
+    <div class="affiliate-info">
+      <div class="affiliate-label">コスパ重視ならこれ</div>
+      <h4>マイプロテイン インパクトホエイプロテイン チョコレートブラウニー味</h4>
+      <div class="stars">★★★★☆</div>
+      <p>1kgあたりのコストが国内ブランドの半額以下。タンパク質含有量が高く（82%以上）、味の種類も豊富。セール時にまとめ買いするのがおすすめ。</p>
+      <a href="#" class="btn-amazon">Amazonで価格を確認する</a>
+    </div>
+  </div>
+
+  <h2>動画でフォームを確認しよう</h2>
+
+  <p>文章だけではフォームのイメージがつかみにくい部分もあります。以下の動画が特にわかりやすいので、トレーニング前に確認してみてください。</p>
+
+  <h3>ジャンプトレーニング解説（To be Stronger）</h3>
+  <p>バスケ・サッカーなど様々なスポーツに対応したジャンプトレーニングをプロが丁寧に解説しています。スクワットのフォームや跳び方のコツを動画で確認できます。</p>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin:16px 0 32px;">
+    <iframe src="https://www.youtube.com/embed/jO44GR7vcSs" title="高く跳ぶために必要なジャンプトレーニング" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px;"></iframe>
+  </div>
+
+  <h3>バスケ選手のための体幹メニュー</h3>
+  <p>ジャンプ力には体幹の安定性も大きく関係します。この動画ではバスケ選手が知っておくべき体幹メニューをわかりやすく紹介しています。</p>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin:16px 0 32px;">
+    <iframe src="https://www.youtube.com/embed/toznt1_7iEc" title="バスケ選手のための体幹メニュー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px;"></iframe>
+  </div>
+
+  <h3>Bリーグ千葉ジェッツ プロトレーナー直伝｜バスケで勝てる体の作り方</h3>
+  <p>Bリーグのプロトレーナーが直接解説する本格的なフィジカルトレーニング動画です。プロレベルの考え方を知ることで、自分のトレーニングの質が上がります。</p>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin:16px 0 32px;">
+    <iframe src="https://www.youtube.com/embed/_-Refp2AJ1Y" title="バスケで勝てる強い体の作り方" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px;"></iframe>
+  </div>
+
+  <h2>まとめ</h2>
+
+  <p>垂直跳びを10cm伸ばすために大切なポイントをまとめます。</p>
+
+  <div class="summary-box">
+    <h2>まとめ</h2>
+    <ul>
+      <li>大腿四頭筋・ハムストリングス・ふくらはぎの3つをバランスよく鍛える</li>
+      <li>週3回・3ヶ月継続すれば10cmアップは十分可能</li>
+      <li>ジャンプスクワットなど爆発系の種目を必ず入れる</li>
+      <li>筋トレ後はプロテインで回復を助ける</li>
+    </ul>
+  </div>
+
+  <p>まずは今日からスクワット15回×3セットだけでも始めてみてください。継続が一番の近道です。</p>
+
+</div>
+
+<footer>
+  <div class="footer-logo">BASKETMUSCLELAB</div>
+  <p>バスケットボール上達のための筋トレ・栄養・器具情報サイト</p>
+  <p>※本サイトはアフィリエイト広告を利用しています。</p>
+  <a href="index.html" class="back-link">← トップページへ戻る</a>
+</footer>
+
+</body>
+</html>
